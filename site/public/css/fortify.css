@@ -1,0 +1,42 @@
+h1{
+	font-size: 50px;
+}
+.head{overflow:hidden;border-bottom:0.2em solid #979a9e;padding:1em 0 0.2em;margin-bottom: 1.5em;vertical-align: middle}
+.head div:first-child{color:#109682;padding:1em;}
+.head div:last-child{color:#666666;font-size: 2em}
+.table{background:#ebf0f5;border-bottom-left-radius:1em;border-bottom-right-radius:1em;  }
+.table tr {border:0.2em solid #fff;text-align: center;}
+body section .table tr td,body section .table tr th {padding:1.2em;}
+body section .table>thead>tr>th{border:none;text-align: center}
+
+
+.bottom-line{text-align: center;padding:1em;}
+.bg_white{background-color: #fff}
+.bg_green{background-color: #40ab9b;color:white;border-top-left-radius:1em;border-top-right-radius:1em;}
+.bg_green th:hover{background-color: #109682}
+.bg_green th:first-child{background-color: #109682}
+.font_green{color:#53b1a3}
+.font_green th:first-child{color:#666666;}
+.font_yellow{color:#fff}
+.font_yellow th span{background-color:#ffa12d;color:#fff;padding:0.5em 2em;border-radius: 0.3em;cursor: pointer }
+.font_yellow th:first-child span{background-color:#fff;border:1px solid #ffa12d;color:#ffa12d;}
+.bg-gray{background-color: #f4f4f4;margin:3em;color:#949596;
+background-image: linear-gradient(to right, #F00 75%, rgba(255, 255, 255, 0) 0%);
+background-position: center bottom;
+background-size: 4em 1px;
+background-repeat: repeat-x;
+display:none;}
+.packages{margin-bottom: 3em;}
+
+.desc{padding:2em 0;font-size:1.3em;}
+.options{border-bottom: .1em dotted #666666;text-align: center;}
+.options p{margin-bottom: -1.1em;}
+.options .glyphicon{top: 15px;cursor: pointer;}
+.options p span{background-color: #fff;font-size: 1.3em;color:#109682;}
+.quote_box{background-color: #109682;text-align: center;margin:1em;}
+.options .row .thumbnail{background-color: #109682;color:#fff;text-align: center;padding: 2em 1em 1em;border:0.2em solid #cfeae6;position: relative}
+.options .row{padding-bottom:5em;}
+.options .row .thumbnail div{border-top:0.1em dotted #fff;padding:0.8em;}
+.options .row .thumbnail div h4{margin-top: -1.2em;}
+.options .row .thumbnail div h4 span{background-color: #109682;}
+/*.bg_green th:active{background-color: #109682}*/

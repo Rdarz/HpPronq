@@ -1,0 +1,71 @@
+{% set init = get("footer") %}
+<footer class="container_fluid ">
+
+	<!-- 	<div class="container footer_columns">
+			<div class="col-md-3">
+				<ul>
+					<li class="footer_title">{{entry.footer.products.title}}</li>
+					{% for entry in entry.footer.products.items -%}
+					<li>{{entry.title}}</li>		
+
+					{%- endfor %}
+				</ul>
+
+			</div>
+			<div class="col-md-3">
+					<ul>
+					<li class="footer_title">{{entry.footer.learn.title}}</li>
+					{% for entry in entry.footer.learn.items -%}
+					<li>{{entry.title}}</li>		
+
+					{%- endfor %}
+				</ul>
+			</div>
+			<div class="col-md-3">
+					<ul>
+					<li class="footer_title">{{entry.footer.company.title}}</li>
+					{% for entry in entry.footer.company.items -%}
+					<li>{{entry.title}}</li>		
+
+					{%- endfor %}
+				</ul>
+
+			</div>
+			<div class="col-md-3">
+					<ul>
+					<li class="footer_title">{{entry.footer.connect.title}}</li>
+					<span>
+					{% for entry_re in entry.footer.connect.items -%}
+					
+					<img alt="Brand" src="{{getImageUrl(entry_re.images)}}" />{{entry_re.items}}	
+
+					{%- endfor %}</span>	
+				</ul>
+
+			</div>
+
+			
+		</div> -->
+		<div class="container ">
+			
+			
+
+			
+		
+			<div class=" bottom_line">
+		<span class="col-md-4 ">{{init.privacy_policy}} | {{init.t_c}}</span>
+		<span class="col-md-4 text-center"><img src='{{getAssetUrl(init.half_logo)}}'>&nbsp;{{init.pronq_com}}</span>
+			<span class="col-md-4 social text-right">
+				{% for entry in init.social%}
+					<img src='{{getAssetUrl(entry.icons)}}'>
+				{% endfor %}
+			</span>
+		</div>
+
+		
+		</div>
+		
+		
+		
+
+</footer>

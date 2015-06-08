@@ -1,0 +1,150 @@
+{% extends "layouts/fortify.html" %}
+
+{# display page values using the {{entry.field_id}} tag. #}
+{% block content %}
+<section >
+<div class="container">
+		<div class="packages">
+			<div class="head vcenter">
+				<div class="col-md-1 "><span>{{entry.packages.back}}</span>
+
+				</div>
+				<div class="col-md-11 text-center">
+						<span>{{entry.packages.title}}</span>
+				</div>
+			</div>
+
+
+
+			<div class="options">
+					<div class="row">
+						{% for box in entry.packages.items %}
+							
+			  					<div class="col-xs-6 col-md-3">
+
+			    					<div class="thumbnail">
+			     						 
+											
+											<div><h4><span>{{entry.packages.dynamic}}</span></h4>
+											<h2>{{box.title}}</h2></div>
+			    					</div>
+			  					</div>				
+
+						{%- endfor %}
+					</div>	
+					<p><span>{{entry.packages.see_all_features}}</span><div class="glyphicon glyphicon-triangle-bottom"></div></p>
+
+			</div>
+			
+				
+		</div>
+
+</div>
+
+
+
+ <div class="container-fluid bg-gray">
+ 	<div class="container desc">
+ 	<p>{{entry.packages.description}}</p>
+ 	</div>
+ </div>
+ 	<div class="container">
+	<table class="table">
+
+
+	<thead class="head">
+					    <tr class="bg_green">					        
+					        {% for inject in entry.quote.dynamic_packages %}
+					        <th>{{inject.title}}</th>
+					        {%- endfor %}
+					    </tr>
+					    <tr class="bg_white font_green">					        
+					        {% for inject in entry.quote.need_quote %}
+					        <th>{{inject.title}}</th>
+					        {%- endfor %}
+					    </tr>
+					    <tr class="bg_white font_yellow">					        
+					    
+					        <th><span>{{entry.quote.contact_us[0].title}}</span></th>
+					        <th ><span>{{entry.quote.contact_us[1].title}}</span></th>
+					        <th><span>{{entry.quote.contact_us[1].title}}</span></th>
+					        <th><span>{{entry.quote.contact_us[1].title}}</span></th>
+					        <th><span>{{entry.quote.contact_us[1].title}}</span></th>
+					        
+					    </tr>					    
+	</thead>
+ 	<tbody>
+				 {% for entry in entry.quote.list_item -%}
+				    <tr>
+				    	<td class="col-md-2 offset1">{{entry.title}}</td>
+				    	<td class="col-md-2 ">
+				    	
+				    	<!-- {{entry.express_value}} -->
+
+						    	{% if entry.express_value == "True" %}
+										<span class="glyphicon glyphicon-ok"></span>
+									{% elseif entry.express_value == "False"%}
+										<!-- null -->
+									{%else %}
+
+										{{entry.express_value}}
+
+
+								{% endif %}
+
+				    	</td>
+				    	<td class="col-md-2 ">
+
+				    			{% if entry.basic_value == "True" %}
+										<span class="glyphicon glyphicon-ok"></span>
+									{% elseif entry.basic_value == "False"%}
+										<!-- null -->
+									{%else %}
+
+										{{entry.basic_value}}
+
+
+								{% endif %}
+
+				    	</td>
+				    	<td class="col-md-2">
+
+				    			{% if entry.standard_value == "True" %}
+										<span class="glyphicon glyphicon-ok"></span>
+									{% elseif entry.standard_value == "False"%}
+										<!-- null -->
+									{%else %}
+
+										{{entry.standard_value}}
+
+
+								{% endif %}
+
+				    	</td>
+				    	<td class="col-md-2">
+
+				    			{% if entry.premium_value == "True" %}
+										<span class="glyphicon glyphicon-ok"></span>
+									{% elseif entry.premium_value == "False"%}
+										<!-- null -->
+									{%else %}
+
+										{{entry.premium_value}}
+
+
+								{% endif %}
+
+				    	</td>
+				    </tr>
+				    {%- endfor %}
+				    <!-- <tr></tr>
+				    <tr></tr>
+				    <tr></tr>
+				    <tr></tr> -->
+				</tbody>
+				</table>
+				<p class="bottom-line">{{entry.tc}}</p>
+ 	</div>
+ </div>
+</section>
+{% endblock %}

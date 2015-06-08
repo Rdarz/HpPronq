@@ -1,0 +1,39 @@
+{% extends "layouts/default.html" %}
+
+{# display page values using the {{entry.field_id}} tag. #}
+{% block content %}
+<section>
+    <h1>{{entry.title}}</h1>
+    
+			<ul>
+			<li><b>Title:</b> {{entry.title}}</li>
+			<li><b>URL:</b> {{entry.url}}</li>
+			<li><b>Privacy policy:</b> {{entry.privacy_policy}}</li>
+			<li><b>t&c:</b> {{entry.t_c}}</li>
+			<li><b>pronq.com:</b> {{entry.pronq_com}}</li>
+			<li><b>Pronq By Hp:</b> {{entry.pronq_by_hp}}</li>
+			<li>
+				<b>Full Logo(url):</b> <img src='{{getAssetUrl(entry.full_logo)}}'>
+			</li>
+			<li>
+				<b>Half Logo(url):</b> <img src='{{getAssetUrl(entry.half_logo)}}'>
+			</li>
+			<li><b>Social:</b>
+				{% set entry_social = entry.social %}
+				<ul>
+				{% for _entry_social in entry_social -%}
+					<li><b>Social</b>:<br>
+						<ul>
+						<li><b>Title:</b> {{_entry_social.title}}</li>
+						<li>
+							<b>icons(url):</b> <img src='{{getAssetUrl(_entry_social.icons)}}'>
+						</li>
+						</ul>
+					</li>
+				{%- endfor %}
+				</ul>
+			</li>
+			</ul>
+    <p style="color: #555; font-size: 14px">Note: Template automatically generated at "D:\Pronq\Pronq\site\views\templates\footer\index.html"</p>
+</section>
+{% endblock %}

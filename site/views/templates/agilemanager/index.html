@@ -1,0 +1,274 @@
+{% extends "layouts/agile.html" %}
+
+{# display page values using the {{entry.field_id}} tag. #}
+{% block content %}
+<section class="container pricingform">
+	<h1>{{entry.pricingform.pricingtitle}}</h1>
+	<hr >
+	<center class="desc">{{entry.pricingform.pricing_description}}</center>
+	<div class="table-responsive">
+			<table class="table ">
+		 		<thead>
+					    <tr>
+					        <th></th>
+					        <th></th>
+					        <th class="text-center ">{{entry.pricingform.pricing_list_head.title}}</th>
+					        <th></th>
+					        <th></th>
+					    </tr>					    
+				</thead>
+				<tbody>
+				 {% for entry in entry.pricingform.pricing_list -%}
+				    <tr>
+				    	<td class="col-md-2 text-center logo"><img alt="Brand" src="{{getAssetUrl(entry.logo)}}"></td>
+				    	<td class="col-md-4 list_prod_color">{{ entry.title }}<p class="list_prod_desc">{{ entry.description }}</p></td>
+				    	<td class="col-md-2 text-center">{{ entry.price }}</td>
+				    	<td class="col-md-2"><button class="btn btn-block  button1">{{ entry.button1 }}</button></td>
+				    	<td class="col-md-2"><button class="btn  btn-block  button2">{{ entry.button2 }}</button></td>
+				    </tr>
+				    {%- endfor %}
+				    <!-- <tr></tr>
+				    <tr></tr>
+				    <tr></tr>
+				    <tr></tr> -->
+				</tbody>
+			</table>
+	</div>
+	<center class="more_help">
+	<span>{{entry.pricingform.pricing_help[0]}}</span>&nbsp;&nbsp;<button class="btn  button3">{{entry.pricingform.pricing_help[1]}}</button>
+	</center>
+
+	
+</section>
+<div class="container_fluid more_info">
+
+		<h2>{{entry.pricingform.pricing_more_help.line1}}</h2>
+		<h4>{{entry.pricingform.pricing_more_help.line2}}</h4>
+		<button class=" btn btn-lg help_button1">{{entry.pricingform.pricing_more_help.button1}}</button>&nbsp;<button class=" btn btn-lg help_button2">{{entry.pricingform.pricing_more_help.button2}}</button>
+</div>
+<!-- <section>
+    <h1>{{entry.title}}</h1>
+    
+			<ul>
+			<li><b>Title:</b> {{entry.title}}</li>
+			<li><b>URL:</b> {{entry.url}}</li>
+			<li><b>Header</b>:<br>
+				<ul>
+				<li>
+					<b>HeaderLogo(url):</b> <img src='{{getAssetUrl(entry.header.headerlogo)}}'>
+				</li>
+				<li><b>HeaderMenu:</b>
+					{% set entry_header_headermenu = entry.header.headermenu %}
+					<ul>
+					{% for _entry_header_headermenu in entry_header_headermenu -%}
+						<li><b>HeaderMenu</b>:<br>
+							<ul>
+							<li><b>Title:</b> {{_entry_header_headermenu.title}}</li>
+							<li><b>Menu1:</b> {{_entry_header_headermenu.menu1}}</li>
+							<li><b>Menu2:</b> {{_entry_header_headermenu.menu2}}</li>
+							<li><b>Menu3:</b> {{_entry_header_headermenu.menu3}}</li>
+							<li><b>Menu4:</b> {{_entry_header_headermenu.menu4}}</li>
+							</ul>
+						</li>
+					{%- endfor %}
+					</ul>
+				</li>
+				<li><b>Signin:</b> {{entry.header.signin}}</li>
+				</ul>
+			</li>
+			<li><b>PricingForm</b>:<br>
+				<ul>
+				<li><b>PricingTitle:</b> {{entry.pricingform.pricingtitle}}</li>
+				<li><b>Pricing List:</b>
+					{% set entry_pricingform_pricing_list = entry.pricingform.pricing_list %}
+					<ul>
+					{% for _entry_pricingform_pricing_list in entry_pricingform_pricing_list -%}
+						<li><b>Pricing List</b>:<br>
+							<ul>
+							<li><b>Title:</b> {{_entry_pricingform_pricing_list.title}}</li>
+							<li><b>Pricing List Title:</b> {{_entry_pricingform_pricing_list.pricing_list_title}}</li>
+							<li><b>Product1:</b>
+								{% set _entry_pricingform_pricing_list_product1 = _entry_pricingform_pricing_list.product1 %}
+								<ul>
+								{% for __entry_pricingform_pricing_list_product1 in _entry_pricingform_pricing_list_product1 -%}
+									<li><b>Product1</b>:<br>
+										<ul>
+										<li><b>Title:</b> {{__entry_pricingform_pricing_list_product1.title}}</li>
+										</ul>
+									</li>
+								{%- endfor %}
+								</ul>
+							</li>
+							<li><b>Product2:</b>
+								{% set _entry_pricingform_pricing_list_product2 = _entry_pricingform_pricing_list.product2 %}
+								<ul>
+								{% for __entry_pricingform_pricing_list_product2 in _entry_pricingform_pricing_list_product2 -%}
+									<li><b>Product2</b>:<br>
+										<ul>
+										<li><b>Title:</b> {{__entry_pricingform_pricing_list_product2.title}}</li>
+										</ul>
+									</li>
+								{%- endfor %}
+								</ul>
+							</li>
+							<li><b>Product3:</b>
+								{% set _entry_pricingform_pricing_list_product3 = _entry_pricingform_pricing_list.product3 %}
+								<ul>
+								{% for __entry_pricingform_pricing_list_product3 in _entry_pricingform_pricing_list_product3 -%}
+									<li><b>Product3</b>:<br>
+										<ul>
+										<li><b>Title:</b> {{__entry_pricingform_pricing_list_product3.title}}</li>
+										</ul>
+									</li>
+								{%- endfor %}
+								</ul>
+							</li>
+							<li><b>Product4:</b>
+								{% set _entry_pricingform_pricing_list_product4 = _entry_pricingform_pricing_list.product4 %}
+								<ul>
+								{% for __entry_pricingform_pricing_list_product4 in _entry_pricingform_pricing_list_product4 -%}
+									<li><b>Product4</b>:<br>
+										<ul>
+										<li><b>Title:</b> {{__entry_pricingform_pricing_list_product4.title}}</li>
+										</ul>
+									</li>
+								{%- endfor %}
+								</ul>
+							</li>
+							<li><b>Product5:</b>
+								{% set _entry_pricingform_pricing_list_product5 = _entry_pricingform_pricing_list.product5 %}
+								<ul>
+								{% for __entry_pricingform_pricing_list_product5 in _entry_pricingform_pricing_list_product5 -%}
+									<li><b>Product5</b>:<br>
+										<ul>
+										<li><b>Title:</b> {{__entry_pricingform_pricing_list_product5.title}}</li>
+										</ul>
+									</li>
+								{%- endfor %}
+								</ul>
+							</li>
+							<li><b>Product6:</b>
+								{% set _entry_pricingform_pricing_list_product6 = _entry_pricingform_pricing_list.product6 %}
+								<ul>
+								{% for __entry_pricingform_pricing_list_product6 in _entry_pricingform_pricing_list_product6 -%}
+									<li><b>Product6</b>:<br>
+										<ul>
+										<li><b>Title:</b> {{__entry_pricingform_pricing_list_product6.title}}</li>
+										</ul>
+									</li>
+								{%- endfor %}
+								</ul>
+							</li>
+							<li><b>Product7:</b>
+								{% set _entry_pricingform_pricing_list_product7 = _entry_pricingform_pricing_list.product7 %}
+								<ul>
+								{% for __entry_pricingform_pricing_list_product7 in _entry_pricingform_pricing_list_product7 -%}
+									<li><b>Product7</b>:<br>
+										<ul>
+										<li><b>Title:</b> {{__entry_pricingform_pricing_list_product7.title}}</li>
+										</ul>
+									</li>
+								{%- endfor %}
+								</ul>
+							</li>
+							<li><b>Product8:</b>
+								{% set _entry_pricingform_pricing_list_product8 = _entry_pricingform_pricing_list.product8 %}
+								<ul>
+								{% for __entry_pricingform_pricing_list_product8 in _entry_pricingform_pricing_list_product8 -%}
+									<li><b>Product8</b>:<br>
+										<ul>
+										<li><b>Title:</b> {{__entry_pricingform_pricing_list_product8.title}}</li>
+										</ul>
+									</li>
+								{%- endfor %}
+								</ul>
+							</li>
+							</ul>
+						</li>
+					{%- endfor %}
+					</ul>
+				</li>
+				<li><b>Pricing Description:</b> {{entry.pricingform.pricing_description}}</li>
+				<li><b>Pricing Help:</b> {{entry.pricingform.pricing_help}}</li>
+				<li><b>Pricing More Help:</b>
+					{% set entry_pricingform_pricing_more_help = entry.pricingform.pricing_more_help %}
+					<ul>
+					{% for _entry_pricingform_pricing_more_help in entry_pricingform_pricing_more_help -%}
+						<li><b>Pricing More Help</b>:<br>
+							<ul>
+							<li><b>Title:</b> {{_entry_pricingform_pricing_more_help.title}}</li>
+							<li><b>Line1:</b> {{_entry_pricingform_pricing_more_help.line1}}</li>
+							<li><b>Line2:</b> {{_entry_pricingform_pricing_more_help.line2}}</li>
+							<li><b>Button1:</b> {{_entry_pricingform_pricing_more_help.button1}}</li>
+							<li><b>Button2:</b> {{_entry_pricingform_pricing_more_help.button2}}</li>
+							</ul>
+						</li>
+					{%- endfor %}
+					</ul>
+				</li>
+				</ul>
+			</li>
+			<li><b>Footer:</b>
+				{% set entry_footer = entry.footer %}
+				<ul>
+				{% for _entry_footer in entry_footer -%}
+					<li><b>Footer</b>:<br>
+						<ul>
+						<li><b>Title:</b> {{_entry_footer.title}}</li>
+						<li><b>Column1:</b>
+							{% set _entry_footer_column1 = _entry_footer.column1 %}
+							<ul>
+							{% for __entry_footer_column1 in _entry_footer_column1 -%}
+								<li><b>Column1</b>:<br>
+									<ul>
+									<li><b>Title:</b> {{__entry_footer_column1.title}}</li>
+									</ul>
+								</li>
+							{%- endfor %}
+							</ul>
+						</li>
+						<li><b>Column2:</b>
+							{% set _entry_footer_column2 = _entry_footer.column2 %}
+							<ul>
+							{% for __entry_footer_column2 in _entry_footer_column2 -%}
+								<li><b>Column2</b>:<br>
+									<ul>
+									<li><b>Title:</b> {{__entry_footer_column2.title}}</li>
+									</ul>
+								</li>
+							{%- endfor %}
+							</ul>
+						</li>
+						<li><b>Column3:</b>
+							{% set _entry_footer_column3 = _entry_footer.column3 %}
+							<ul>
+							{% for __entry_footer_column3 in _entry_footer_column3 -%}
+								<li><b>Column3</b>:<br>
+									<ul>
+									<li><b>Title:</b> {{__entry_footer_column3.title}}</li>
+									</ul>
+								</li>
+							{%- endfor %}
+							</ul>
+						</li>
+						<li><b>Column4:</b>
+							{% set _entry_footer_column4 = _entry_footer.column4 %}
+							<ul>
+							{% for __entry_footer_column4 in _entry_footer_column4 -%}
+								<li><b>Column4</b>:<br>
+									<ul>
+									<li><b>Title:</b> {{__entry_footer_column4.title}}</li>
+									</ul>
+								</li>
+							{%- endfor %}
+							</ul>
+						</li>
+						</ul>
+					</li>
+				{%- endfor %}
+				</ul>
+			</li>
+			</ul>
+    <p style="color: #555; font-size: 14px">Note: Template automatically generated at "D:\Pronq\Pronq\site\views\templates\agilemanager\index.html"</p>
+</section> -->
+{% endblock %}

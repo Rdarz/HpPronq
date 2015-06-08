@@ -1,0 +1,33 @@
+/*main body*/
+.pricingform{color:#6d7378;padding-top:1em;}
+.pricingform h1{padding:0 .6em;}
+.pricingform hr{border-color:#a5aaaf }
+.pricingform .desc{padding:0.4em 0 1.5em 0;font-size: 1.5em}
+.pricingform table thead{background-color: #ebebeb}
+.pricingform table tr{border:0.1em solid #b5b8bb;}
+.pricingform table{padding:1em;}
+body .pricingform .table > tbody > tr > td{vertical-align: middle;padding:1.2em;}
+body .pricingform .table > tbody > tr > .logo > img{filter:grayscale(100%); -webkit-filter: grayscale(100%);opacity: 0.3}
+body .pricingform .table > tbody > tr > td > .btn-default{width:100%;border-color: #12a9b2;color:#12a9b2;}
+.list_prod_color{color:#12a9b2;font-weight: bold;font-size: 1.2em}
+.list_prod_desc{color:#545454;font-weight:initial ;font-size: initial}
+body .pricingform .table > thead > tr > th{color:#292f34;}
+body .pricingform .table button.button1{
+	background: white;
+	border:1px solid #12a9b2;
+	color:#12a9b2;
+}
+body .pricingform .table button.button2{
+	background: #12a9b2;
+	border:1px solid #12a9b2;
+	color: #fff;
+	
+}
+.more_help{padding:1em 1em 2em 1em;}
+button.button3{background: #f69011;color: #fff;}
+.more_info{padding:6em;color:#fff;background-color: #0a5a73;margin:auto;text-align: center;background-image: url('../images/bg_design.png')}
+.more_info h4{line-height: 3em;}
+.more_info button{margin:2% 1%;min-width:12%;}
+.more_info .help_button1{background-color:#548c9d;color: #fff;font-size: 1.5em}
+.more_info .help_button2{background-color:#548c9d ;color: #fff;font-size: 1.5em	}
+/*main body end*/

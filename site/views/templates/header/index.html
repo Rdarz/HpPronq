@@ -1,0 +1,44 @@
+{% extends "layouts/default.html" %}
+
+{# display page values using the {{entry.field_id}} tag. #}
+{% block content %}
+<section>
+    <h1>{{entry.title}}</h1>
+    
+			<ul>
+			<li><b>Title:</b> {{entry.title}}</li>
+			<li><b>URL:</b> {{entry.url}}</li>
+			<li><b>Header</b>:<br>
+				<ul>
+				<li>
+					<b>logo(url):</b> <img src='{{getAssetUrl(entry.header.logo)}}'>
+				</li>
+				<li><b>Menu:</b>
+					{% set entry_header_menu = entry.header.menu %}
+					<ul>
+					{% for _entry_header_menu in entry_header_menu -%}
+						<li><b>Menu</b>:<br>
+							<ul>
+							<li><b>Title:</b> {{_entry_header_menu.title}}</li>
+							</ul>
+						</li>
+					{%- endfor %}
+					</ul>
+				</li>
+				<li><b>Sign In</b>:<br>
+					<ul>
+					<li><b>Title:</b> {{entry.header.sign_in.title}}</li>
+					<li>
+						<b>icon(url):</b> <img src='{{getAssetUrl(entry.header.sign_in.icon)}}'>
+					</li>
+					<li>
+						<b>Help(url):</b> <img src='{{getAssetUrl(entry.header.sign_in.help)}}'>
+					</li>
+					</ul>
+				</li>
+				</ul>
+			</li>
+			</ul>
+    <p style="color: #555; font-size: 14px">Note: Template automatically generated at "D:\Pronq\Pronq\site\views\templates\header\index.html"</p>
+</section>
+{% endblock %}

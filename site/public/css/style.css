@@ -1,0 +1,52 @@
+html{background-color:#e6e9e9}
+body{background-color:#f7f7f7;margin:0 auto;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5em;color:#545454;box-shadow:0 0 2px rgba(0,0,0,.06)}
+a{color:#0083e8}
+b,strong{font-weight:600}
+
+/*header*/
+body .nav > li > a{padding:1.2em;}
+body .navbar-brand{padding:1.2em;}
+body .navbar-nav{margin-top:0;padding-left: 3.5em;padding-top: 0.5em;}
+body .navbar-right{padding:0;float: right;margin:0;}
+.header_background{background-color:#1f2327;border-top:0.2em solid #ffa12d}
+.navbar-nav > li {padding-left: 0.5em;padding-right: 0.5em;}
+body .navbar-right > li {padding-left: 1em;text-align: right;float:right;border-left:1px solid #444;padding-top: 0.5em;}
+body .navbar-right > li:first-child{border-right:1px solid #444;}
+body .navbar-right span{right:2em;color:#fff;cursor:pointer;}
+body .navbar-inverse .navbar-nav > li > a{color:#fff;}
+.rounded_corner_box{margin: 0.8em 0;background-color: #464a51;border-radius: 20px;border:none;padding:0.5em;}
+
+
+header ul li .create_act{font-weight:bold;background-color: #ffa12d;color:white;padding:0.4em;margin:0.7em 0em;border-radius: 0.2em}
+body .vertica > li {border:none;}
+body .vertica > li:first-child {border:none;}
+.vertica .sign_in{font-weight: bold;margin:0;padding-right:0;}
+/*.vertica > li > a{padding:0;}*/
+
+/*header end*/
+
+
+/*footer*/
+footer{background-color: #1f2227;padding:3em 0 0.4em;position:relative;}
+.footer_title{margin-bottom: 1em;color:#fda22d;border-bottom: 1px solid #fda22d;line-height: 2em;font-size: 1.2em;list-style: none;}
+footer ul{list-style: none}
+footer li{line-height: 2.2em;color:white;}
+footer li:nth-child(2){margin-top: 1em}
+
+.footer_logo{
+background-color: #1f2227;position: relative;
+top: -2em;}
+footer .bottom_line{color:#fff;border-top:0.1em solid;padding:0 0.2em;line-height: 2.5em}
+.without_line{color:#fff;padding:0 0.2em;}
+footer .bottom-logo{padding:0;}
+.fright{float:right;text-align: right}
+.fcenter{margin:auto;}
+.footer_columns{padding-bottom: 3em}
+.footer_columns span img{padding:0.77em;}
+.col-95{width:95%;float:left;}
+.col-5{width:5%;float:right;}
+
+footer .bottom_line .social{padding:0;}
+.social img{padding:0 1em;}
+.social img:last-child{padding:0 0;}
+/*footer end*/

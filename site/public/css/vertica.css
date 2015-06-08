@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Sanchez);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
+
+.banner button{width:250px;padding:1em;background-color: #fea12a;border-style: none;color:#fff;font-weight:bold;position:absolute;right:0;left:0;margin: auto;bottom:6em;}
+.banner .container-fluid{padding:0;position: relative}
+.banner .container{text-align: center}
+.banner .container b{color:#fea12a;}
+.banner .container h4{color:#666;font-size: 1.6em;line-height: 1.5em}
+.banner img{width:100%;}
+
+
+.description .container .col-md-6 img{margin-top: -4em;margin-bottom: -3em;}
+.description ul{padding:0;}
+.description ul li{font-size:1.5em;margin: 0.8em 0;padding-left:2em;text-indent: -2em;}
+
+
+.video .bg{
+	
+			 background-image: url("../images/Screen-Shot.png");
+	     
+  	     
+position:relative;
+  min-height:500px;
+}
+
+.video .container-fluid .container p{position:relative;text-align: center;margin: auto;top:3.8em;width:55%;font-size:1.5em;color:#ebf0f5;left:0;right:0;}
+.video .container-fluid .container p:nth-child(2){padding:1em}
+.video .container-fluid .container p span{padding:0.2em;font-size: 0.8em}
+.video .container-fluid .container p .glyphicon{cursor:pointer;border:0.1em solid white;border-radius:1em;padding:0.3em;margin-left:1em;}
+.video_container{display:none;margin:2%;top:0;bottom:0;left:0;right:0;position:absolute;width:94%;min-height:94%;background-color: black;border:3em solid white;}
+.video_container .glyphicon{cursor:pointer;position:absolute;top:-2em;right:-2em;padding: 0.5em;border:2px solid black;border-radius: 100px;}
+/*.video .container-fluid img{width:100%;position:relative;}*/
+.video .container-fluid{background-color: #3f3f5b}
+
+
+.clients .container{padding:2em 1em;}
+.clients .container h2{text-align:center;color:#ffa12d;width:50%;margin: auto}
+.clients .container h4{text-align:center;color:#42494f;margin:auto;padding:2em 1em 3em 1em;}
+.clients .container .row p{display:none;margin-top:2em;padding:2em;border:0.12em solid #12a9b2;font-size: 1.2em;overflow: hidden}
+.clients .container .row p:first-child{display:block;}
+.clients .container .row p:first-child:before,.clients .container .row p:first-child:after{
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.clients .container .row p:first-child:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #88b7d5;
+	border-width: 30px;
+	margin-left: -30px;
+}
+.clients .container .row p:first-child:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #c2e1f5;
+	border-width: 36px;
+	margin-left: -36px;
+}
+.clients .container .row p span span{display: block;padding:1em 1em 1em 0;}
+.clients .container .row p .col-md-11{border-left:0.1em solid #d6dbe1;}
+.clients .container .button{margin: 2em 1em 1em 2em;
+display: inline-block;color:#fff;padding:1em;border-radius:0.1em;background-color: #ffa12d;cursor:pointer;}
+
+/*.ellipse{border-right:0.5em solid #d6dbe1;}*/
+
+.services{border-top: 0.2em solid #a0dde0;padding-top:2em }
+.services .container h2{text-align:center;color:#42494f;width:80%;margin: auto;font-size: 3em}
+.services .container h4{text-align:center;color:#42494f;margin:auto;padding:1em;font-size: 2em}
+.services .container .row .col-md-6{margin: 1em 0px;position: relative;overflow: hidden }
+.services .container .row .col-md-6 .overlay{position: absolute;
+background-color: rgba(0, 0, 0, 0.8);
+color: #FFF;
+top: 17.2em;
+height: 100%;
+width: 94%;
+left: 1.3em;
+padding:0.1em 3em;
+transition:top 1s;}
+.services .container .row .col-md-6 .overlay:hover{top:0em;}
+.services .container .row .col-md-6 .overlay h3{border-bottom: 0.1em solid #fff;padding-bottom: 0.5em;text-indent:0.1em;text-align: left}
+.services .container .row .col-md-6 .overlay p{text-align: left;padding-top:2em;font-size: 1.2em}
+.services .container .row button{margin: 1em 2em 2em ;border:none;font-size: 1.2em;
+display: inline-block;color:#fff;padding:0.5em 3em;border-radius:0.1em;background-color: #ffa12d;cursor:pointer;}
+
+
+
+
+.media{font-family: 'Open Sans', sans-serif;color:#666;background-image:url('../images/mid-town.png') ;background-position: center; height:647px; text-align:center;border-top: 0.2em solid #a0dde0;/*padding-top:2em*/background-color: #fefbe9;/*box-shadow: inset 0px 0px 100px 100px #fefbe9;*/}
+.media img{}
+.media .container h1{padding-top:0.5em;}
+
+.media .container .row{ margin-top: 5em; }
+.media .container .col-md-8 p{background-color: #fff;padding:1em;font-size: 1.5em;height:10em;text-align: left}
+.media .container .col-md-6:nth-child(odd) .col-md-8 p:before{
+	background: red;
+position: absolute;
+	right: 2.65%; bottom: 50%;
+	width: 7.71%;
+	height:20%;
+	
+	transform: rotate(45deg);
+	background: white;
+	content: '';
+}
+.media .container .col-md-6:nth-child(even) .col-md-8 p:before{
+	background: red;
+position: absolute;
+	left: 2.65%; bottom: 50%;
+	width: 7.71%;
+	height:20%;
+	
+	transform: rotate(45deg);
+	background: white;
+	content: '';
+}
+
+
+.media .container .col-md-8 b{display: block;color:#32a5ac;text-align: left;font-size:0.8em;}
+.media .container .col-md-4{background-color: #fff; border-radius: 100px;float:right;
+padding: 3em 0em 0em;
+height: 163px;
+text-align: center;
+width: 163px;}
+.media .container .col-md-6{margin-bottom: 2em;height:15em;}
+.media .container .col-md-8{display:none; /*margin-left:-50em;*/	}
+
+.media .container .col-md-6:nth-child(even) .col-md-8{float:right;/*margin-right:-50em;*/}
+.media .container .col-md-6:nth-child(even) .col-md-4{float:left;}
+
+
+.signup{font-family: 'Open Sans', sans-serif;text-align: center;}
+.signup .container h1{padding :0.5em 0;color:#ffa12d;}
+.signup .container h2{padding :0.5em 0;color:#42494f;}
+.signup .container .row{ margin-top: 3em;background: url("../images/line.png") no-repeat scroll 31% 45%, transparent url("../images/line.png") no-repeat scroll 69% 45%; }
+.signup .container button{margin: 1em 2em 2em ;border:none;font-size: 1.2em;
+display: inline-block;color:#fff;padding:0.5em 3em;border-radius:0.1em;background-color: #ffa12d;cursor:pointer;}

@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/css?family=Sanchez);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+.footer{padding:1em 0;background-color: #1f2227;}
+
+.hpa {background-color:#006478;font-family: 'Open Sans', sans-serif;}
+.hpa .structure{position: relative}
+.hpa .structure .banner-body{padding-bottom:20em;}
+.hpa .container .banner{color:#fff;padding:2em 0 ;}
+.hpa .container .banner h4{width:76%;display: inline-block;line-height: 1.4em;}
+.hpa .work{background-color: #fff;width:94%;border:0.2em solid #808487;position:absolute;top:42em;left:0;right:0;margin: auto;padding-top: 1em}
+.hpa .work .row{margin:2em 0;}
+.hpa .work .row .col-md-4 p{font-weight: bold;color:#808487;padding:2em 2em 0 ;height:4em;}
+.hpa .work .row .col-md-4 p:last-child{font-weight: normal;padding:0 2em;}
+.hpa .work .row .col-md-4{border-left:0.1em solid ;color:#808487;}
+.hpa .work .row .col-md-4:first-child{border-left:none;}
+.hpa .work .glyphicon-chevron-down{cursor:pointer;padding:1.5em;border-radius: 2.5em ;top:-1.5em;position: absolute;background-color: #fff;font-size: 1.5em;color: #f99d2a;font-weight: normal}
+
+
+.hpa .benefits{background-color: #ecedee;padding-bottom:0;padding-top: 15em}
+
+.hpa .benefits .container .row .col-md-6 .thumbnail{height:20em;position: relative}
+.hpa .benefits .container .row .col-md-6 .thumbnail .image_container{height:10em;}
+.hpa .benefits .container .row .col-md-6 .thumbnail .desc{margin:1em;display:none;padding:2em;background-color:rgba(0,0,0,0.95);color:#fff;position: absolute;top:0;left:0;right:0;bottom:0;}
+.hpa .benefits .container .row .col-md-6 .thumbnail .desc .desc_container{padding: 1em;font-size: 1.4em}
+.hpa .benefits .container .row .col-md-6 .thumbnail span{padding:2em 0.5em;}
+.hpa .benefits button{margin: 1em 2em 2em ;border:none;font-size: 1.2em;
+display: inline-block;color:#fff;padding:0.5em 3em;border-radius:0.1em;background-color: #ffa12d;cursor:pointer;}
+.hpa .benefits .glyphicon-plus,.glyphicon-remove{color:#f99d2a;cursor: pointer}
+.hpa .partners{background-color: #fff;color:#8e9295;border-top:0.1em solid #8e9295;padding-top:1% }
+.hpa .partners .container h1{color:#42494f;}
+.hpa .partners .container .title{margin: 3em 6em 1em;	}
+.hpa .partners .container .title .logo{}
+.hpa .partners .container .title .logo:last-child{filter:grayscale(100%);}
+.hpa .partners .row p{display:none;margin-top:2em;padding:2em;border:0.12em solid #8e9295;font-size: 1.2em;overflow: hidden;text-align: left}
+.hpa .partners .row p:first-child{display:block;}
+.hpa .partners .row p span span{display:block;padding:1.2em ;line-height: 0.5em}
+.hpa .partners .row p .col-md-11{border-left:0.1em solid #d6dbe1;}
+.hpa .partners .row p .col-md-1 img{border:0.12em solid #006478;border-radius: 2em;padding:1em; }
+.hpa .partners .container button{margin: 2em 2em 2em ;border:none;font-size: 1.4em;
+display: inline-block;color:#fff;padding:0.8em 3em;border-radius:0.1em;background-color: #ffa12d;cursor:pointer;}

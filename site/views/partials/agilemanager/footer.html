@@ -1,0 +1,74 @@
+{# If you have a form for footer in contentstack.io then use get() view helper to retrive footer entry. #}
+{# e.g. set footer = get("footer_form_id") #}
+{# And then render footer values using the {{footer.field_name}} #}
+
+
+{% set init = get("footer") %}
+<footer class="container_fluid ">
+
+		<div class="container footer_columns">
+			<div class="col-md-3">
+				<ul>
+					<li class="footer_title">{{entry.footer.products.title}}</li>
+					{% for entry in entry.footer.products.items -%}
+					<li>{{entry.title}}</li>		
+
+					{%- endfor %}
+				</ul>
+
+			</div>
+			<div class="col-md-3">
+					<ul>
+					<li class="footer_title">{{entry.footer.learn.title}}</li>
+					{% for entry in entry.footer.learn.items -%}
+					<li>{{entry.title}}</li>		
+
+					{%- endfor %}
+				</ul>
+			</div>
+			<div class="col-md-3">
+					<ul>
+					<li class="footer_title">{{entry.footer.company.title}}</li>
+					{% for entry in entry.footer.company.items -%}
+					<li>{{entry.title}}</li>		
+
+					{%- endfor %}
+				</ul>
+
+			</div>
+			<div class="col-md-3">
+					<ul>
+					<li class="footer_title">{{entry.footer.connect.title}}</li>
+					<span>
+					{% for entry_re in entry.footer.connect.items -%}
+					
+					<img alt="Brand" src="{{getImageUrl(entry_re.images)}}" />{{entry_re.items}}	
+
+					{%- endfor %}</span>	
+				</ul>
+
+			</div>
+
+			
+		</div>
+		<div class="container ">
+			
+			
+
+			
+		
+		
+		<div class="col-95 bottom_line">
+		<span>{{init.privacy_policy}}</span> | <span>{{init.t_c}}</span>
+			<span class="fright">{{init.pronq_com}}</span>
+		</div>
+
+		<div class="col-5 bottom-logo">
+		<img class="footer_logo " alt="Brand" src="{{getImageUrl(init.full_logo)}}" />
+		</div>
+		</div>
+		
+		
+		
+
+</footer>

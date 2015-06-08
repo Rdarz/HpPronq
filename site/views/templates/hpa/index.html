@@ -1,0 +1,210 @@
+{% extends "layouts/hpa.html" %}
+
+{# display page values using the {{entry.field_id}} tag. #}
+{% block content %}
+<section class="hpa text-center">
+
+<div class="structure">
+		<div class="banner-body container-fluid">
+				<div class="container">
+					<div class="banner text-center">
+						<h1>{{entry.banner.tagline1}}</h1>
+					</div>
+				</div>
+			<img src='{{getAssetUrl(entry.banner.bg)}}'>
+				<div class="container">
+					<div class="banner text-center">
+						<h4 class="text-center">{{entry.banner.tagline2}}</h4>
+					</div>
+				</div>	
+		</div>
+
+			<div class="work container" id="work">
+			<a href="#work" class="glyphicon glyphicon-chevron-down"></a>
+					<h1>{{entry.whatdo.tagline1}}</h1>
+					<h3>{{entry.whatdo.tagline2}}</h3>
+				<div class="row">
+					{% for entry in entry.whatdo.offer %}
+						<div class="col-md-4 text-center">
+
+								
+								
+								<img src='{{getAssetUrl(entry.logo)}}'>
+								<p>{{entry.title}}</p>
+								
+								<p>{{entry.desc}}</p> 
+								
+						</div>
+					{% endfor %}
+				</div>
+
+			</div>
+		
+			<div class="benefits container-fluid">
+				
+					<h1>{{entry.benefits.tagline1}}</h1>
+					<h3>{{entry.benefits.tagline2}}</h3>
+
+					<div class="container">
+						<div class="row">
+					{% for init in entry.benefits.offers %}
+					  <div class="col-md-6">
+
+					    <div class="thumbnail">
+					 	  <h2>{{init.title}}</h2>
+					 	  <div class="image_container">
+					      	<img src='{{getAssetUrl(init.img)}}'>
+					      </div>
+					      <span>{{entry.benefits.learn_more}}</span><span class="glyphicon glyphicon-plus "></span>
+						      <div class="desc ">
+						      	<div class="desc_container">
+						      		<p>{{init.desc}}</p>
+						      	</div>
+						      	<span>{{entry.benefits.close}}</span><span class="glyphicon glyphicon-remove "></span>
+						      </div>
+					</div>
+
+					    </div>
+					  
+
+					{% endfor %}
+					</div>
+						<button>{{entry.benefits.partner_with_us}}</button>
+
+					</div>
+					</div>
+
+			</div>
+</div>
+
+<div class="partners container-fluid">
+	<div class="container">
+			<h1>{{entry.partners.tagline1}}</h1>
+			<h1>{{entry.partners.tagline2}}</h1>
+			<h3>{{entry.partners.tagline3}}</h3>
+	
+
+
+			<div class="row title">
+			{% for entry in entry.partners.partner %}
+				<div class="col-md-6 logo {{entry.title}}">
+				<img src='{{getAssetUrl(entry.logo)}}'>
+				</div>
+			{% endfor %}
+			</div>
+			<div class="row {{entry.title}}">
+				<!-- <img src='{{getAssetUrl(entry.customers.ellipse)}}' class="elipse"> -->
+			{% for entry in entry.partners.partner %}			
+				
+					<p>
+						<span class="col-md-1"><img src='{{getAssetUrl(entry.quote)}}' class="elipse"></span>
+						<span class="col-md-11">
+							{{entry.desc}}
+							<span>{{entry.owner}}</span>
+						</span>
+					</p>
+			{% endfor %}
+			
+			</div>
+			<button>{{entry.partners.sign_up_now}}</button>
+
+
+	</div>
+
+
+
+</div>
+
+   <!--  <h1>{{entry.title}}</h1>
+    
+			<ul>
+			<li><b>Title:</b> {{entry.title}}</li>
+			<li><b>URL:</b> {{entry.url}}</li>
+			<li><b>Banner</b>:<br>
+				<ul>
+				<li><b>Tagline1:</b> {{entry.banner.tagline1}}</li>
+				<li>
+					<b>BG(url):</b> <img src='{{getAssetUrl(entry.banner.bg)}}'>
+				</li>
+				<li><b>Tagline2:</b> {{entry.banner.tagline2}}</li>
+				</ul>
+			</li>
+			<li><b>whatdo</b>:<br>
+				<ul>
+				<li><b>TagLine1:</b> {{entry.whatdo.tagline1}}</li>
+				<li><b>TagLine2:</b> {{entry.whatdo.tagline2}}</li>
+				<li><b>offer:</b>
+					{% set entry_whatdo_offer = entry.whatdo.offer %}
+					<ul>
+					{% for _entry_whatdo_offer in entry_whatdo_offer -%}
+						<li><b>offer</b>:<br>
+							<ul>
+							<li><b>Title:</b> {{_entry_whatdo_offer.title}}</li>
+							<li>
+								<b>Logo(url):</b> <img src='{{getAssetUrl(_entry_whatdo_offer.logo)}}'>
+							</li>
+							<li><b>Desc:</b> {{_entry_whatdo_offer.desc}}</li>
+							</ul>
+						</li>
+					{%- endfor %}
+					</ul>
+				</li>
+				</ul>
+			</li>
+			<li><b>Benefits</b>:<br>
+				<ul>
+				<li><b>TagLine1:</b> {{entry.benefits.tagline1}}</li>
+				<li><b>TagLine2:</b> {{entry.benefits.tagline2}}</li>
+				<li><b>offers:</b>
+					{% set entry_benefits_offers = entry.benefits.offers %}
+					<ul>
+					{% for _entry_benefits_offers in entry_benefits_offers -%}
+						<li><b>offers</b>:<br>
+							<ul>
+							<li><b>Title:</b> {{_entry_benefits_offers.title}}</li>
+							<li>
+								<b>img(url):</b> <img src='{{getAssetUrl(_entry_benefits_offers.img)}}'>
+							</li>
+							<li><b>desc:</b> {{_entry_benefits_offers.desc}}</li>
+							</ul>
+						</li>
+					{%- endfor %}
+					</ul>
+				</li>
+				<li><b>Learn More:</b> {{entry.benefits.learn_more}}</li>
+				<li><b>Close:</b> {{entry.benefits.close}}</li>
+				<li><b>Partner With Us:</b> {{entry.benefits.partner_with_us}}</li>
+				</ul>
+			</li>
+			<li><b>Partners</b>:<br>
+				<ul>
+				<li><b>Tagline1:</b> {{entry.partners.tagline1}}</li>
+				<li><b>TagLine2:</b> {{entry.partners.tagline2}}</li>
+				<li><b>TagLine3:</b> {{entry.partners.tagline3}}</li>
+				<li><b>partner:</b>
+					{% set entry_partners_partner = entry.partners.partner %}
+					<ul>
+					{% for _entry_partners_partner in entry_partners_partner -%}
+						<li><b>partner</b>:<br>
+							<ul>
+							<li><b>Title:</b> {{_entry_partners_partner.title}}</li>
+							<li>
+								<b>Logo(url):</b> <img src='{{getAssetUrl(_entry_partners_partner.logo)}}'>
+							</li>
+							<li><b>Desc:</b> {{_entry_partners_partner.desc}}</li>
+							<li>
+								<b>quote(url):</b> <img src='{{getAssetUrl(_entry_partners_partner.quote)}}'>
+							</li>
+							<li><b>owner:</b> {{_entry_partners_partner.owner}}</li>
+							</ul>
+						</li>
+					{%- endfor %}
+					</ul>
+				</li>
+				<li><b>Sign up now:</b> {{entry.partners.sign_up_now}}</li>
+				</ul>
+			</li>
+			</ul>
+    <p style="color: #555; font-size: 14px">Note: Template automatically generated at "D:\Pronq (4)\Pronq\site\views\templates\hpa\index.html"</p> -->
+</section>
+{% endblock %}

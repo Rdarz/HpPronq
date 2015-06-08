@@ -1,0 +1,196 @@
+{% extends "layouts/vertica.html" %}
+
+{# display page values using the {{entry.field_id}} tag. #}
+{% block content %}
+<section>
+	<div class="banner">
+		<div class="container">
+			<h1>{{entry.banner.line1}}</h1>
+			<h1>{{entry.banner.line2}}</h1>
+			<h4>{{entry.banner.line3}}</h4>
+		</div>
+		<div class="container-fluid">
+			
+			<img src='{{getAssetUrl(entry.banner.bg)}}'>
+			<button >{{entry.banner.button}}</button>
+		</div>
+	</div>
+	<div class="description">
+		<div class="container ">
+			<div class="col-md-6">
+			<h1>{{ entry.description.title}}</h1>
+			<ul>
+					{% for entry in entry.description.list_item -%}
+						<li class="glyphicon glyphicon-menu-right">
+							{{entry.title}}
+							
+						</li>
+					{%- endfor %}
+			</ul>
+			</div>
+			<div class="col-md-6">
+				<img src='{{getAssetUrl(entry.description.crane)}}'>
+			</div>
+		</div>
+	</div>
+	<div class="video">
+		<div class="container-fluid">
+		<div class="container bg">
+			<!-- <img src='{{getAssetUrl(entry.video.bg)}}'> -->
+			{{entry.video.description}}
+			<p><span><img src="{{getAssetUrl(entry.video.icon[0])}}"></span><span>{{entry.video.author}}</span></p>
+			<p>{{entry.video.watch_video}}<span class="glyphicon glyphicon-play" ></span></p>
+			<div class="video_container"><span class="glyphicon glyphicon-remove" ></span></div>
+		</div>
+		</div>
+	</div>
+	<div class="clients">
+		<div class="container text-center">
+			<h2>{{entry.customers.tag_line1}}</h2>
+			<h4>{{entry.customers.tag_line2}}</h4>
+			<div class="row">
+			{% for entry in entry.customers.clients %}
+				<div class="col-md-3 logo {{entry.title}}">
+				<img src='{{getAssetUrl(entry.logo)}}'>
+				</div>
+			{% endfor %}
+			</div>
+			<div class="row {{entry.title}}">
+				<!-- <img src='{{getAssetUrl(entry.customers.ellipse)}}' class="elipse"> -->
+			{% for entryp in entry.customers.clients %}			
+				
+					<p>
+						<span class="col-md-1"><img src='{{getAssetUrl(entry.customers.ellipse)}}' class="elipse"></span>
+						<span class="col-md-11">
+							{{entryp.description}}
+							<span>{{entryp.by}}</span>
+						</span>
+					</p>
+			{% endfor %}
+			
+			</div>
+			<span class="button">{{entry.customers.button}}</span>
+
+		</div>
+		
+	</div>
+
+	<div class="services">
+		<div class="container text-center">
+			<h2>{{entry.services.tag_line1}}</h2>
+			<h4>{{entry.services.tag_line2}}</h4>
+
+			<div class="row">
+			{% for entry in entry.services.service %}	
+				<div class="col-md-6">
+					<img src='{{getAssetUrl(entry.bg)}}'>
+					<div class="overlay">
+						<h3>{{entry.title}}</h3>
+						<p>{{entry.content}}<p>
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+			<div class="row">
+				<button>{{entry.services.learn_more}}</button>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="media">
+
+		<div class="container">
+		<h1>{{entry.media.tag_line}}</h1>
+		<div class="row">
+		{% for entry in entry.media.type%}	
+			<div class="col-md-6">
+				<div class="col-md-8">
+				<p>
+					{{entry.description}}</p>
+				</div>
+				<div class="col-md-4">
+				
+				<img src='{{getAssetUrl(entry.logo)}}'>
+					
+				</div>
+			</div>
+
+		{% endfor %}		
+		</div>
+		</div>
+	</div>
+	<div class="signup">
+		<div class="container">
+		<h1>{{entry.signup.tagline}}</h1>
+			<div class="row">
+			{% for entry in entry.signup.process%}
+				<div class="col-md-4 text-center">
+					<img src='{{getAssetUrl(entry.logo)}}'>
+					<p>{{entry.title}}</p>
+				</div>
+			{% endfor %}
+			</div>
+			<h2>{{entry.signup.tagline2}}</h2>
+			<button>{{entry.signup.button}}</button>
+		</div>
+	</div>
+</section>
+<!-- <section>
+    <h1>{{entry.title}}</h1>
+    
+			<ul>
+			<li><b>Title:</b> {{entry.title}}</li>
+			<li><b>URL:</b> {{entry.url}}</li>
+			<li><b>Banner</b>:<br>
+				<ul>
+				<li><b>Line1:</b> {{entry.banner.line1}}</li>
+				<li><b>Line2:</b> {{entry.banner.line2}}</li>
+				<li><b>Line3:</b> {{entry.banner.line3}}</li>
+				<li><b>Button:</b> {{entry.banner.button}}</li>
+				<li>
+					<b>BG(url):</b> <img src='{{getAssetUrl(entry.banner.bg)}}'>
+				</li>
+				</ul>
+			</li>
+			<li><b>Description</b>:<br>
+				<ul>
+				<li><b>List Item:</b>
+					{% set entry_description_list_item = entry.description.list_item %}
+					<ul>
+					{% for _entry_description_list_item in entry_description_list_item -%}
+						<li><b>List Item</b>:<br>
+							<ul>
+							<li><b>Title:</b> {{_entry_description_list_item.title}}</li>
+							</ul>
+						</li>
+					{%- endfor %}
+					</ul>
+				</li>
+				<li>
+					<b>Crane(url):</b> <img src='{{getAssetUrl(entry.description.crane)}}'>
+				</li>
+				</ul>
+			</li>
+			<li><b>Video</b>:<br>
+				<ul>
+				<li>
+					<b>bg(url):</b> <img src='{{getAssetUrl(entry.video.bg)}}'>
+				</li>
+				<li><b>Description:</b> {{entry.video.description}}</li>
+				<li><b>author:</b> {{entry.video.author}}</li>
+				<li><b>icon:</b>
+					{% set entry_video_icon = entry.video.icon %}
+					<ul>
+					{% for _entry_video_icon in entry_video_icon -%}
+							<li><img src='{{getAssetUrl(_entry_video_icon)}}'></li>
+					{%- endfor %}
+					</ul>
+				</li>
+				<li><b>Watch Video:</b> {{entry.video.watch_video}}</li>
+				</ul>
+			</li>
+			</ul>
+    <p style="color: #555; font-size: 14px">Note: Template automatically generated at "D:\Pronq (2)\Pronq\site\views\templates\vertica\index.html"</p>
+</section> -->
+{% endblock %}
